@@ -1,0 +1,14 @@
+html {
+    font-family: 'Odibee Sans';
+    background-image:url();
+    background-repeat: no-repeat ;
+    background-attachment: fixed ;
+    background-size: cover ;
+    margin: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
