@@ -4,20 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Al Dente Foods</title>
-    <link rel='stylesheet' href='css/styles.css'>
+    <title>The Recipe Barn</title>
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1><center>Al Dente Foods</center></h1>
-    <h2><center>Food Recepies made easy!</center></h2>
-    <div class="container">
-     <nav>
-        <a class="active" href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <div class="banner-area">
+        <header>
+            <a href="/" class="logo"><img src="images/RecipeBarnlogo.png" width="200px">
 
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Recipes</a></li>
+            </ul>
+        </header>
+        <div class="banner-text">
+            <h2>The Recipe Barn</h2>
+            <p>Bringing you Delicous Recipes with a click of a button!</p>
+            <a href="#">Lets Get started</a>
+        </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script>
+         $('.menu').slicknav({
+             'appendTo' : 'header',
+             'label' : ''
+
+         });
+    </script>
 </body>
 </html>
