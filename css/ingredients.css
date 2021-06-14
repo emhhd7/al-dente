@@ -15,7 +15,7 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(56, 51, 51, 0.507);
+    background-color: rgba(0, 0, 0, 0.459);
     padding-bottom: 2em;
     margin: 0 10em;
     border-radius: 10px;
@@ -89,6 +89,7 @@ body {
     width: 30%;
     background-color: #eeee;
     color: black;
+    text-align: center;
 }
 
 .cards h3 {
@@ -131,7 +132,6 @@ header {
     list-style: none;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
 }
 
 .menu li{
