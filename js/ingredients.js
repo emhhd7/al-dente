@@ -1,5 +1,6 @@
 "use strict"
 
+// Place to store data
 let foodData = {}
 
 // Returns a URL based on the user's choices
@@ -20,14 +21,13 @@ let generateURL = function () {
     let stringResults = checkedInputs.map(getItems)
 
     if (stringResults == 'vegetarian') {
-
         return `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&number=100&fillIngredients=true&diet=${stringResults}&addRecipeInformation=true`
     } else {
         return `https://api.spoonacular.com/recipes/complexSearch?includeIngredients=${stringResults.join()}&apiKey=${apiKey}&number=100&fillIngredients=true&addRecipeInformation=true`
     }
 
     // Adds the string to the URL via TEMPLATE STRING
-    // Uses JOIN to turn the array into string data
+    // Uses JOIN to turn the array into string data [chicken, potato]
 
 }
 
@@ -56,6 +56,9 @@ let createParagrahs = function (data) {
 
         divCard.append(recipeImage)
         divCard.append(recipeText)
+
+        // Created a variable for generateIngredients arguement. 
+        // Allows the ingredients list to be multiplied.
 
         let number = 1
 

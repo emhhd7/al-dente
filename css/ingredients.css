@@ -15,10 +15,61 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.507);
+    background-color: rgba(56, 51, 51, 0.507);
     padding-bottom: 2em;
-    margin: 0 4.5em;
+    margin: 0 10em;
     border-radius: 10px;
+    color: rgb(238, 230, 210);
+    font-family: 'Poppins', sans-serif;
+}
+
+.recipeBarn button {
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.753);
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.recipeBarn button:hover {
+    background: olivedrab;
+}
+
+.recipeBarn h1 {
+    font-size: 35px;
+    border: solid 4px goldenrod;
+    box-shadow: black 1.5px 1.5px;
+    border-radius: 100px;
+    padding: .5em;
+    color: goldenrod;
+    text-shadow: 2px 2px black;
+}
+
+.recipeBarn p {
+    font-size: 20px;
+    padding-bottom: 30px;
+    color: goldenrod;
+    text-shadow: 2px 2px black;
+}
+
+.entree {
+    margin-right: 3em;
+    width: 25%;
+    font-size: 20px;
+    text-shadow: 2px 2px black;
+}
+
+.pig {
+    padding-top: 1.5em;
+}
+
+.options {
+    display : flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 70%;
+    margin-left: 4em;
 }
 
 .checkboxArea {
@@ -37,6 +88,7 @@ body {
     margin-bottom: 3em;
     width: 30%;
     background-color: #eeee;
+    color: black;
 }
 
 .cards h3 {
@@ -65,17 +117,6 @@ body {
     width: 10%;
 }
 
-.entree {
-    margin-right: 7em;
-}
-
-.options {
-    display : flex;
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: center;
-    width: 70%;
-}
 /* Miguel's Code STARTS HERE: */
 
 header {
