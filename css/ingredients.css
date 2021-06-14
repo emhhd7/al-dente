@@ -131,6 +131,7 @@ header {
     float: right;
     list-style: none;
     display: flex;
+    justify-content: space-evenly;
     flex-direction: row;
 }
 
