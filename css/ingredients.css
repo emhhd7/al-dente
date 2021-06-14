@@ -1,8 +1,125 @@
+body, html {
+    height: 100%
+}
+
+body {
+    background-image: url('/images/cuttingboard.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.recipeBarn {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.507);
+    padding-bottom: 2em;
+    margin: 0 4.5em;
+    border-radius: 10px;
+}
+
+.checkboxArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1em;
+    margin-bottom: 3em;
+    width: 30%;
+    background-color: #eeee;
+}
+
+.cards h3 {
+    font-size: 18px;
+    word-wrap: normal;
+}
+
+.cards img {
+    width: 290px;
+    border-radius: 4px;
+}
+
+.multiplier button{
+    margin-right: 4px;
+}
+
+#resultsSection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 3em;
+}
+
+#submission {
+    width: 10%;
+}
+
+.entree {
+    margin-right: 7em;
+}
+
 .options {
     display : flex;
     flex-direction: row;
     justify-content: space-between;
     text-align: center;
-    margin-left: 2em;
-    margin-right: 2em;
+    width: 70%;
+}
+/* Miguel's Code STARTS HERE: */
+
+header {
+    padding: 15px 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu {
+    width: 42%;
+    float: right;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.menu li{
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 13px;
+    background-color: rgba(0, 0, 0, 0.459);
+} 
+
+.menu li:hover {
+    background: olivedrab;
+}
+
+.menu li:hover a{
+    color: 000; 
+}
+
+.menu li a{
+    text-decoration: none;
+    font-family: baloo;
+    color:#fff;
+    text-transform: uppercase;
+}
+
+.logo{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    float: left;
 }

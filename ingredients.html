@@ -5,45 +5,115 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The Recipe Barn | Recipes</title>
     <link rel="stylesheet" href="css/ingredients.css">
 </head>
 
 <body>
+    <div class="banner-area">
+        <header>
+            <a href="/" class="logo">
+                <img src="images/RecipeBarnlogo.png" width="200px">
+            </a>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Recipes</a></li>
+            </ul>
+        </header>
+    </div>
+
+    <div class="recipeBarn">
+        <h1>Ingredients Testing</h1>
+        <p>Pick an entree!</p>
+        <div class="options" id="options">
+
+            <div class="entree">
+                <img src="css/nature/cowimg.png" width="80px">
+                <br>
+                <div class="checkboxArea">
+                    <input type="checkbox" name="beef" value="beef">
+                    <label for="beef">Beef</label><br>
+                </div>
+            </div>
+
+            <div class="entree">
+                <img src="css/nature/chicken.png" width="60px">
+                <br>
+                <div class="checkboxArea">
+                    <input type="checkbox" name="chicken" value="chicken">
+                    <label for="chicken">Chicken</label><br>
+                </div>
+            </div>
+
+            <div class="entree">
+                <img src="css/nature/fish2.png" width="120px">
+                <br>
+                <div class="checkboxArea">
+                    <input type="checkbox" name="fish" value="fish">
+                    <label for="fish">Fish</label><br>
+                </div>
+            </div>
+
+            <div class="entree">
+                <img src="css/nature/turkey.png" width="80px">
+                <br>
+                <div class="checkboxArea">
+                    <input type="checkbox" name="turkey" value="turkey">
+                    <label for="turkey">Turkey</label><br>
+                </div>
+            </div>
+
+            <div class="entree">
+                <img src="css/nature/broccoli.png" width="70px">
+                <br>
+                <div class="checkboxArea">
+                    <input type="checkbox" name="vegetarian" value="vegetarian">
+                    <label for="vegetarian">Vegan</label><br>
+                </div>
+            </div>
+        </div>
+        <br>
+        <button type="submit" id="submission" value="Submit">Generate!</button>
+
+
+        <div id="recipeCard">
+            <div id="resultsSection">
+            </div>
+        </div>
+    </div>
+
+
+
     <!-- Checkboxes Created to test funtionality -->
-    <h1>Ingredients Testing</h1>
+    <!-- <h1>Ingredients Testing</h1>
     <p>Let's start with your meats!</p>
     <div class="options" id="options">
-        <div class="thing">
+        <div class="entree">
             <img src="css/nature/cowimg.png" width="80px">
             <br>
             <input type="checkbox" name="beef" value="beef">
             <label for="beef">Beef</label><br>
         </div>
-
-        <div class="thing">
+        <div class="entree">
             <img src="css/nature/chicken.png" width="60px">
             <br>
             <input type="checkbox" name="chicken" value="chicken">
             <label for="chicken">Chicken</label><br>
         </div>
-
-        <div class="thing">
+        <div class="entree">
             <img src="css/nature/fish2.png" width="120px">
             <br>
             <input type="checkbox" name="fish" value="fish">
             <label for="fish">Fish</label><br>
         </div>
-
-        <div class="thing">
+        <div class="entree">
             <img src="css/nature/turkey.png" width="80px">
             <br>
             <input type="checkbox" name="turkey" value="turkey">
             <label for="turkey">Turkey</label><br>
         </div>
-
-
-        <div class="thing">
+        <div class="entree">
             <img src="css/nature/broccoli.png" width="70px">
             <br>
             <input type="checkbox" name="vegetarian" value="vegetarian">
@@ -51,7 +121,7 @@
         </div>
     </div>
     <br>
-    <button type="submit" id="submission" value="Submit">Generate!</button>
+    <button type="submit" id="submission" value="Submit">Generate!</button> -->
 
     <!-- Created a place for results to print to. -->
     <div id="recipeCard">
