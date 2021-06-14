@@ -31,6 +31,7 @@ header{
     color: whitesmoke;
     font-size: 13px;
     float: left;
+    background-color: rgba(0, 0, 0, 0.459);
 } 
 
 .menu li:hover {
@@ -63,7 +64,8 @@ header{
     transform: translate(-50%,-50%);
     color: whitesmoke;
     text-align: center;
-    background-color: rgba(106, 142, 35, 0.205);
+    background-color: rgba(0, 0, 0, 0.459);
+    padding: 25px;
 
 
 }
