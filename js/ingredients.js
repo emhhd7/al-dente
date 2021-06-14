@@ -1,5 +1,6 @@
 "use strict"
 
+// Place to store data
 let foodData = {}
 
 // Returns a URL based on the user's choices
@@ -20,14 +21,13 @@ let generateURL = function () {
     let stringResults = checkedInputs.map(getItems)
 
     if (stringResults == 'vegetarian') {
-
-        return `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&number=100&fillIngredients=true&diet=${stringResults}`
+        return `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&number=100&fillIngredients=true&diet=${stringResults}&addRecipeInformation=true`
     } else {
-        return `https://api.spoonacular.com/recipes/complexSearch?includeIngredients=${stringResults.join()}&apiKey=${apiKey}&number=100&fillIngredients=true`
+        return `https://api.spoonacular.com/recipes/complexSearch?includeIngredients=${stringResults.join()}&apiKey=${apiKey}&number=100&fillIngredients=true&addRecipeInformation=true`
     }
 
     // Adds the string to the URL via TEMPLATE STRING
-    // Uses JOIN to turn the array into string data
+    // Uses JOIN to turn the array into string data [chicken, potato]
 
 }
 
@@ -37,6 +37,7 @@ let createParagrahs = function (data) {
     resultsSection.innerText = ''
 
     let randomizeData = shuffleArray(data.results)
+    console.log(data.results)
 
     randomizeData.forEach(function (recipe) {
         // Creates elements + div FOR EACH item
@@ -44,6 +45,7 @@ let createParagrahs = function (data) {
         const recipeText = document.createElement('h3')
         const recipeImage = document.createElement('img')
         const ingredientsList = document.createElement('ul')
+        const instructions = document.createElement('a')
         divCard.className = "cards"
 
         foodData[recipe.title] = recipe
@@ -55,8 +57,13 @@ let createParagrahs = function (data) {
         divCard.append(recipeImage)
         divCard.append(recipeText)
 
+        // Created a variable for generateIngredients arguement. 
+        // Allows the ingredients list to be multiplied.
+
         let number = 1
 
+        const divButtons = document.createElement('div')
+        divButtons.className = "multiplier"
 
         const noneButton = document.createElement('button')
         noneButton.addEventListener('click', function () {
@@ -64,7 +71,7 @@ let createParagrahs = function (data) {
         })
         noneButton.innerHTML = 'Original'
         noneButton.value = 1
-        divCard.append(noneButton)
+        divButtons.append(noneButton)
 
         const doubleButton = document.createElement('button')
         doubleButton.addEventListener('click', function () {
@@ -72,7 +79,7 @@ let createParagrahs = function (data) {
         })
         doubleButton.innerHTML = 'Double'
         doubleButton.value = 2
-        divCard.append(doubleButton)
+        divButtons.append(doubleButton)
 
         const tripleButton = document.createElement('button')
         tripleButton.addEventListener('click', function () {
@@ -80,7 +87,9 @@ let createParagrahs = function (data) {
         })
         tripleButton.innerHTML = 'Triple'
         tripleButton.value = 3
-        divCard.append(tripleButton)
+        divButtons.append(tripleButton)
+
+        divCard.append(divButtons)
 
 
         // recipeIngredients is an object.
@@ -96,8 +105,11 @@ let createParagrahs = function (data) {
                 recipeIngredients.innerText = `${individualItem.amount} ${individualItem.unit} ${individualItem.name}`
                 ingredientsList.append(recipeIngredients)
             })
+            instructions.innerText = 'Instructions'
+            instructions.href = recipe.sourceUrl
         })
         divCard.append(ingredientsList)
+        divCard.append(instructions)
     })
 }
 
